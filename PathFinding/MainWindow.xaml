@@ -1,0 +1,28 @@
+﻿<Window x:Class="PathFinding.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PathFinding"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Canvas
+            Grid.Column="0"
+            Background="MediumPurple"
+            Mouse.MouseDown="Canvas_MouseDown"
+            />
+        <StackPanel Grid.Column="1">
+            <Button Content="Thicken lines" Click="Button_Click"/>
+            <Button Content="Delete Spot" Click="DeleteSpot_Click"/>
+            <Button Content="Path" Click="Path_Click"/>
+            <Button Content="Clear Path" Click="ClearPath_Click"/>
+            <Button Content="Clear All" Click="ClearAll_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
